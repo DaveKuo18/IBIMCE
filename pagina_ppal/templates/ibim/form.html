@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contáctenos</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/contacto.css' %}">
+		<meta charset="utf-8">
+		<link rel="icon" href="{% static 'img/logo_ibimce.ico' %}">
+	</head>
+
+	<body style="overflow-x:hidden; overflow-y:hidden">
+		<div class="texto_y_form">
+			<p>Déjenos sus datos y su mensaje, le contestaremos tan pronto como nos sea posible. También puede acceder a nuestas redes sociales haciendo click en los íconos correspondientes.</p>
+		</div>
+		<div class="mail">
+			<form action="{% url 'enviado' %}" method="POST"> {% csrf_token %}
+				<input type="text" name="nombre" placeholder="Ingrese su nombre" required="">
+				<input type="email" name="mail" placeholder="Ingrese su correo electrónico" required="">
+				<input type="number" name="numero" placeholder="Ingrese su número de teléfono" required="">
+				<br><br>
+				<textarea placeholder="Mensaje" name="mensaje" required=""  size="600" ></textarea>
+				<input type="submit" class="boton">
+			</form>
+		</div>
+
+		<div class="logos">
+			<a href="https://api.whatsapp.com/send?phone= +5491151102603" target="_BLANK"><img src="{% static 'img/wpp.png' %}" class="logowpp"></a>
+			<a href="https://www.youtube.com/channel/UCoAVw7liJhtopuDfdaMFWEw" target="_BLANK" target="_BLANK"><img src="{% static 'img/yt.png' %}" class="logoyt"></a>
+			<a href="https://www.facebook.com/ibimce" target="_BLANK"><img src="{% static 'img/fb.png' %}" class="logofb"></a>
+			<a href="https://www.instagram.com/ibimce" target="_BLANK" target="_BLANK"><img src="{% static 'img/ig.png' %}" class="logoig"></a>	
+		</div>
+
+		<?php
+		include("enviar.php");
+		?>
+	</body>
+</html>

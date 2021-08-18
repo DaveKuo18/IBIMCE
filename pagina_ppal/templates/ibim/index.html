@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	{% include 'ibim/head.html' %}
+
+	<body class="padre">
+		<header class="div-menues">
+
+			<div class="div-menu-ppal">
+
+				<div class="menues">
+					<div class ="menu">
+						<div class="a"><a href="#quienes"><i class="fas fa-address-card"></i> Nosotros</a></div>
+						<div class="a"><a href="#lugar"><i class="fas fa-location-arrow"></i> Ubicación</a></div>
+						<div class="a"><a href="#reuniones"><i class="fas fa-calendar-alt"></i> Reuniones</a></div>
+						<!--<a href="#contacto"><i class="fas fa-phone-square-alt"></i> Contacto </a>-->
+					</div>
+				</div>
+
+				<div class="logo-ppal">
+					<a href="{% url 'index' %}"><img src="{% static 'img/nombre.png' %}" alt="Logo" class="logo"></a>
+				</div>
+	
+				<div class="menues">
+					<div class="menu">
+						<div class="a"><a href="{% url 'predicaciones' %}"><i class="fas fa-bible"></i> Predicaciones</a></div>
+						<div class="a"><a href="#" target="_BLANK"><i class="fas fa-campground"></i> Campamentos</a></div>	
+						<div class="a"><a href="{% url 'cielo' %}" class="cielo"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="div-menu-peg">
+				<nav class="menu-peg"><ul>
+					<li><a href="#quienes"><i class="fas fa-address-card barras"></i> Sobre Nosotros</a></li>
+					<li><a href="#reuniones"><i class="fas fa-calendar-alt"></i> Nuestras Reuniones</a></li>
+					<li><a href="#lugar"><i class="fas fa-location-arrow"></i> Dónde nos encontramos</a></li>
+					<!--<li><a href="#contacto"><i class="fas fa-phone-square-alt"></i> Contacto </a></li>-->
+					<li><a href="{% url 'predicaciones' %}"><i class="fas fa-bible"></i> Predicaciones</a></li>
+					<li><a href="#" target="_BLANK"><i class="fas fa-campground"></i> Campamentos IBIMCE</a></li>
+					<li><a href="{% url 'cielo' %}"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></li>
+				</ul></nav>
+			</div>
+
+			<div class="div-menu-res">
+				<nav class="menu-res">
+					<div class="boton-contenedor">
+						<div class="boton fas fa-bars">
+						</div>
+					</div>
+					
+					<div class="div-menu-res-ul">
+						<ul class="menu-res-ul">
+							<li><a href="ibim#quienes"><i class="fas fa-address-card"></i> Sobre Nosotros</a></li>
+							<br>
+							<li><a href="ibim#reuniones"><i class="fas fa-calendar-alt"></i> Nuestras Reuniones</a></li>
+							<br>
+							<li><a href="ibim#lugar"><i class="fas fa-location-arrow"></i> Dónde nos Encontramos</a></li>
+							<br>
+							<li><a href="predicaciones"><i class="fas fa-bible"></i> Predicaciones</a></li>
+							<br>
+							<li><a href="campa/campa contruccion.html" target="_BLANK"><i class="fas fa-campground"></i> Campamentos</a></li>
+							<br>
+							<li><a href="#"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+		</header>
+
+		<article class="cuerpo">
+			<img src="{% static 'img/Isotipo.png' %}" id="inicio" class="isotipo">
+
+			<div class="separador-up separador-up1"></div>
+
+			<div id ="quienes"></div>
+
+			<div class="separador-down separador-down1"></div>
+
+			<div>
+				<h1 class="titulo"> Sobre Nosotros </h1>
+				<p> Somos una iglesia bautista situada en Ciudad Evita, provincia de Buenos Aires. Comenzamos nuestra obra aquí el 21 de julio de 2001... [COMPLETAR] </p>
+			</div>
+			<p id = "invitacion"><a href="{% url 'sobre_nosotros' %}">¿Quiere saber más?</a></p>
+
+			<div class="separador-up"></div>
+
+			<div id ="reuniones"> </div>
+
+			<div class="separador-down"></div>
+
+			<div>
+				<h2 class="titulo"> Nuestras Reuniones </h2>
+					<table class="p">
+						<tr><td>Miércoles 19:00 Reunión de Oración (virtual)</td></tr>
+						<tr><td>Sábados 19:00 Reunión de compartir</td></tr>
+						<tr><td>Domingos 18:30 Culto (presencial), 18:45 (virtual)</td></tr>
+					</table>
+			</div>
+
+			<div class="separador-up"></div>
+
+			<div id ="lugar"> </div>
+
+			<div class="separador-down"></div>
+
+			<div>
+				<h3 class="titulo"> Dónde nos encontramos </h3>
+				<p> Nos encontramos en Ciudad Evita, partido de La Matanza, en la provincia de Buenos Aires, Argentina. Estamos sobre la calle El Leñatero 2028 [COMPLETAR]</p>
+
+				<br> <br>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.8757136606105!2d-58.528622284896606!3d-34.733527071884744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf0c06189123%3A0x19374d5bd2050bb!2sIglesia%20Bautista%20Independiente%20Misionera!5e0!3m2!1ses-419!2sar!4v1603050715061!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa"></iframe>
+			</div>			
+		</article>
+	</body>
+
+	{% include 'ibim/footer.html' %}
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contáctenos</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/contacto.css' %}">
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,100;0,300;1,800&display=swap" rel="stylesheet">
+	</head>
+
+	<body class="saludo">
+		<div class="gracias">
+			<b>Muchas gracias por escribirnos. Vamos a ponernos en contacto con usted tan pronto como podamos. Bendiciones</b>
+		</div>
+
+		<div class="img">
+			<a href="{% url 'index' %}"><img src="{% static 'img/Logo mini.png' %}"></a>
+		</div>
+
+		<div class="vuelta">
+			<b>Puede hacer click en el logo para volver al inicio.</b>
+		</div>
+
+	</body>

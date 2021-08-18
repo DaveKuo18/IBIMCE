@@ -1,0 +1,37 @@
+{% load static %}
+{% block body %}
+
+    <footer class="bajo-pagina">
+        <h4 class="titulo" id ="contacto">¿Quiere contactarse con nosotros?</h4>
+        <div class="img-y-contacto">
+            <!--<img src="{% static 'img/Logo mini.png' %}" height="250">-->
+
+            <div class="comunicarse">
+
+                <!--<p class="logo_p">Puede poner en contacto por medio de nuestras redes sociales</p>-->
+
+                <div class="logos">	
+                    <div class="wpp">
+                        <a href="https://api.whatsapp.com/send?phone= +5491151102603" target="_BLANK"><img src="{% static 'img/wpp.png' %}" class="logo-red logowpp"></a>
+                    </div>
+
+                    <div class="yt">
+                        <a href="https://www.youtube.com/channel/UCoAVw7liJhtopuDfdaMFWEw" target="_BLANK" target="_BLANK"><img src="{% static 'img/yt.png' %}" class="logo-red logoyt"></a>
+                    </div>
+
+                    <div class="fb">
+                        <a href="https://www.facebook.com/ibimce" target="_BLANK"><img src="{% static 'img/fb.png' %}" class="logo-red logofb"></a>
+                    </div>
+
+                    <div class="ig">
+                        <a href="https://www.instagram.com/ibimce" target="_BLANK" target="_BLANK"><img src="{% static 'img/ig.png' %}" class="logo-red logoig"></a>
+                    </div>
+                </div>
+
+                <p class="logo_p msj">O bien dejarnos un mensaje haciendo <a href="{% url 'formulario' %}" class="click-aqui">click aquí </a></p>
+
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
