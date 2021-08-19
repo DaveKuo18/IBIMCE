@@ -334,39 +334,38 @@ PREDICACIONES
 	margin-right: 20px;
 }
 
-.atajos{
+.atajos-anios{
 	position: fixed;
 	left: 22px;
 	top: 90px;
 	font-size: 22px;
 	z-index: 50000;
-	transition: all 0.25;
 }
-	.atajos ul{
-		list-style-type: none;
-		transition: all 0.25;
-	}
-	.los-años li ul{
-		display: none;
+
+.cada-anio, .cada-anio li{
+	list-style-type: none;
+}
+
+.cada-anio ul{
+	display: none;
+}
+	.cada-anio li:hover > ul{
+		display: block;
+		transition-duration: 3s;
 	}
 
-	.los-años a{
-		color: var(--azul1);
+.cada-anio a{
+	color: var(--azul1);
+}
+	.mes:hover{
+		background-color: var(--azul1);
 	}
 
-	.los-años a:hover{
-		color: #fff;
-	}
+.cada-anio a:hover{
+	color:#fff;
+}
 
-		.los-años li ul li:hover{
-			background-color: var(--azul1);
-			color:#fff;
-		}
-			.los-años li:hover > ul{
-				display: block;
-				transition: all;
-			}
-.años{
+.anio{
 	font-family: 'Sansita Swashed', cursive;
 	font-size: 30px;
 	background-color: var(--azul1);
@@ -377,11 +376,11 @@ PREDICACIONES
 	width: 135%;
 	margin-top: 1px;
 	color:#000;
+	cursor: default;
 }
-
-	.años:hover{
-	background-color: var(--gris2);
-	cursor: pointer;
+	.anios:hover{
+		background-color: var(--gris2);
+		cursor: pointer;
 	}
 
 h3 {
@@ -423,7 +422,7 @@ h4 {
 }
 
 
-.mes{
+.meses{
 	max-width: 90%;
 	min-width: 90%;
 	margin: auto;
