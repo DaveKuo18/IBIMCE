@@ -5,7 +5,71 @@
     {% include 'ibim/head.html' %}
 
     <body class="padre">
-        <div class="atajos-anios" id="div-menu">
+		<header class="div-menues">
+			<div class="div-menu-ppal">
+
+				<div class="menues">
+					<div class ="menu">
+						<div class="a"><a href="../#quienes"><i class="fas fa-address-card"></i> Nosotros</a></div>
+						<div class="a"><a href="../#lugar"><i class="fas fa-location-arrow"></i> Ubicación</a></div>
+						<div class="a"><a href="../#reuniones"><i class="fas fa-calendar-alt"></i> Reuniones</a></div>
+						<!--<a href="#contacto"><i class="fas fa-phone-square-alt"></i> Contacto </a>-->
+					</div>
+				</div>
+
+				<div class="logo-ppal">
+					<a href="{% url 'index' %}"><img src="{% static 'img/nombre.png' %}" alt="Logo" class="logo"></a>
+				</div>
+	
+				<div class="menues">
+					<div class="menu">
+						<div class="a"><a href="{% url 'predicaciones' %}"><i class="fas fa-bible"></i> Predicaciones</a></div>
+						<div class="a"><a href="#" target="_BLANK"><i class="fas fa-campground"></i> Campamentos</a></div>	
+						<div class="a"><a href="{% url 'cielo' %}" class="cielo"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="div-menu-peg">
+				<nav class="menu-peg"><ul>
+					<li><a href="../#quienes"><i class="fas fa-address-card barras"></i> Sobre Nosotros</a></li>
+					<li><a href="../#reuniones"><i class="fas fa-calendar-alt"></i> Nuestras Reuniones</a></li>
+					<li><a href="../#lugar"><i class="fas fa-location-arrow"></i> Dónde nos encontramos</a></li>
+					<!--<li><a href="#contacto"><i class="fas fa-phone-square-alt"></i> Contacto </a></li>-->
+					<li><a href="{% url 'predicaciones' %}"><i class="fas fa-bible"></i> Predicaciones</a></li>
+					<li><a href="#" target="_BLANK"><i class="fas fa-campground"></i> Campamentos IBIMCE</a></li>
+					<li><a href="{% url 'cielo' %}"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></li>
+				</ul></nav>
+			</div>
+
+			<div class="div-menu-res">
+				<nav class="menu-res">
+					<div class="boton-contenedor">
+						<div class="boton fas fa-bars">
+						</div>
+					</div>
+					
+					<div class="div-menu-res-ul">
+						<ul class="menu-res-ul">
+							<li><a href="ibim#quienes"><i class="fas fa-address-card"></i> Sobre Nosotros</a></li>
+							<br>
+							<li><a href="ibim#reuniones"><i class="fas fa-calendar-alt"></i> Nuestras Reuniones</a></li>
+							<br>
+							<li><a href="ibim#lugar"><i class="fas fa-location-arrow"></i> Dónde nos Encontramos</a></li>
+							<br>
+							<li><a href="predicaciones"><i class="fas fa-bible"></i> Predicaciones</a></li>
+							<br>
+							<li><a href="../campa/campa contruccion.html" target="_BLANK"><i class="fas fa-campground"></i> Campamentos</a></li>
+							<br>
+							<li><a href="#"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="mas-predicas">¿Más Predicaciones?</div>
+		<div class="atajos-anios" id="div-menu">
 			<ul class="cada-anio">
 				<li><p class="anio">2021</p>
 					<ul>
@@ -76,69 +140,6 @@
 				</li>
 			</ul>
 		</div>
-
-		<header class="div-menues">
-			<div class="div-menu-ppal">
-
-				<div class="menues">
-					<div class ="menu">
-						<div class="a"><a href="../#quienes"><i class="fas fa-address-card"></i> Nosotros</a></div>
-						<div class="a"><a href="../#lugar"><i class="fas fa-location-arrow"></i> Ubicación</a></div>
-						<div class="a"><a href="../#reuniones"><i class="fas fa-calendar-alt"></i> Reuniones</a></div>
-						<!--<a href="#contacto"><i class="fas fa-phone-square-alt"></i> Contacto </a>-->
-					</div>
-				</div>
-
-				<div class="logo-ppal">
-					<a href="{% url 'index' %}"><img src="{% static 'img/nombre.png' %}" alt="Logo" class="logo"></a>
-				</div>
-	
-				<div class="menues">
-					<div class="menu">
-						<div class="a"><a href="{% url 'predicaciones' %}"><i class="fas fa-bible"></i> Predicaciones</a></div>
-						<div class="a"><a href="#" target="_BLANK"><i class="fas fa-campground"></i> Campamentos</a></div>	
-						<div class="a"><a href="{% url 'cielo' %}" class="cielo"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="div-menu-peg">
-				<nav class="menu-peg"><ul>
-					<li><a href="../#quienes"><i class="fas fa-address-card barras"></i> Sobre Nosotros</a></li>
-					<li><a href="../#reuniones"><i class="fas fa-calendar-alt"></i> Nuestras Reuniones</a></li>
-					<li><a href="../#lugar"><i class="fas fa-location-arrow"></i> Dónde nos encontramos</a></li>
-					<!--<li><a href="#contacto"><i class="fas fa-phone-square-alt"></i> Contacto </a></li>-->
-					<li><a href="{% url 'predicaciones' %}"><i class="fas fa-bible"></i> Predicaciones</a></li>
-					<li><a href="#" target="_BLANK"><i class="fas fa-campground"></i> Campamentos IBIMCE</a></li>
-					<li><a href="{% url 'cielo' %}"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></li>
-				</ul></nav>
-			</div>
-
-			<div class="div-menu-res">
-				<nav class="menu-res">
-					<div class="boton-contenedor">
-						<div class="boton fas fa-bars">
-						</div>
-					</div>
-					
-					<div class="div-menu-res-ul">
-						<ul class="menu-res-ul">
-							<li><a href="ibim#quienes"><i class="fas fa-address-card"></i> Sobre Nosotros</a></li>
-							<br>
-							<li><a href="ibim#reuniones"><i class="fas fa-calendar-alt"></i> Nuestras Reuniones</a></li>
-							<br>
-							<li><a href="ibim#lugar"><i class="fas fa-location-arrow"></i> Dónde nos Encontramos</a></li>
-							<br>
-							<li><a href="predicaciones"><i class="fas fa-bible"></i> Predicaciones</a></li>
-							<br>
-							<li><a href="../campa/campa contruccion.html" target="_BLANK"><i class="fas fa-campground"></i> Campamentos</a></li>
-							<br>
-							<li><a href="#"><i class="fas fa-solid fa-question"></i> ¿Cómo ir al cielo?</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</header>
 
         <article class="cuerpo">
             {% block body %}
