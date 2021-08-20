@@ -171,11 +171,11 @@ p, .p {
 	font-size: 30px;
 }
 	.p{
-		text-align: center;
 		justify-content: center;
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
+		list-style-type: none;
 	}
 
 	#invitacion{
@@ -334,38 +334,39 @@ PREDICACIONES
 	margin-right: 20px;
 }
 
-.atajos-anios{
+.atajos{
 	position: fixed;
 	left: 22px;
-	top: 130px;
+	top: 90px;
 	font-size: 22px;
 	z-index: 50000;
+	transition: all 0.25;
 }
-
-.cada-anio, .cada-anio li{
-	list-style-type: none;
-}
-
-.cada-anio ul{
-	display: none;
-}
-	.cada-anio li:hover > ul{
-		display: block;
-		transition-duration: 3s;
+	.atajos ul{
+		list-style-type: none;
+		transition: all 0.25;
+	}
+	.los-años li ul{
+		display: none;
 	}
 
-.cada-anio a{
-	color: var(--azul1);
-}
-	.mes:hover{
-		background-color: var(--azul1);
+	.los-años a{
+		color: var(--azul1);
 	}
 
-.cada-anio a:hover{
-	color:#fff;
-}
+	.los-años a:hover{
+		color: #fff;
+	}
 
-.anio{
+		.los-años li ul li:hover{
+			background-color: var(--azul1);
+			color:#fff;
+		}
+			.los-años li:hover > ul{
+				display: block;
+				transition: all;
+			}
+.años{
 	font-family: 'Sansita Swashed', cursive;
 	font-size: 30px;
 	background-color: var(--azul1);
@@ -376,18 +377,12 @@ PREDICACIONES
 	width: 135%;
 	margin-top: 1px;
 	color:#000;
-	cursor: default;
 }
-	.anios:hover{
-		background-color: var(--gris2);
-		cursor: pointer;
-	}
 
-.mas-predicas{
-	font-size: 25px;
-	padding: 20px 3px;
-	font-family: 'Sansita Swashed', cursive;
-}
+	.años:hover{
+	background-color: var(--gris2);
+	cursor: pointer;
+	}
 
 h3 {
 	color: #7996B6;
@@ -428,7 +423,7 @@ h4 {
 }
 
 
-.meses{
+.mes{
 	max-width: 90%;
 	min-width: 90%;
 	margin: auto;

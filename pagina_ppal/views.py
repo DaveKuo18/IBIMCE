@@ -2,11 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import reuniones_comunes, reuniones_especiales
 
 # Create your views here.
 
 def index(request):
-    return render(request, "ibim/index.html")
+    return render(request, "ibim/index.html", {
+        "comunes": reuniones_comunes.objects.all(),
+        "especiales": reuniones_especiales.objects.all()
+    })
 
 def predicaciones(request):
     return render(request, "ibim/predicaciones.html")

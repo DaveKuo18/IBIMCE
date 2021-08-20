@@ -93,11 +93,21 @@
 
 			<div>
 				<h2 class="titulo"> Nuestras Reuniones </h2>
-					<table class="p">
-						<tr><td>Miércoles 19:00 Reunión de Oración (virtual)</td></tr>
-						<tr><td>Sábados 19:00 Reunión de compartir</td></tr>
-						<tr><td>Domingos 18:30 Culto (presencial), 18:45 (virtual)</td></tr>
-					</table>
+				<h3> Reuniones cotidianas </h3>
+					<ul class="p">
+						{% for reunion in comunes %}
+							<li>{{ reunion.descripcion }}: {{ reunion.dia }}, {{ reunion.horario }} - {{ reunion.lugar }}</li>
+						{% endfor %}
+					</ul>
+
+				<div class="separador-up"></div>
+
+				<h3> Reuniones especiales </h3>
+					<ul class="p">
+						{% for reunion in especiales %}
+							<li>{{ reunion.descripcion }}: {{ reunion.dia }}, {{ reunion.horario }} - {{ reunion.lugar }}</li>
+						{% endfor %}
+					</ul>
 			</div>
 
 			<div class="separador-up"></div>
@@ -112,7 +122,7 @@
 
 				<br> <br>
 
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369.4377233977321!2d-58.52657663624377!3d-34.733565627382205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf0c06189123%3A0x19374d5bd2050bb!2sIglesia%20Bautista%20Independiente%20Misionera!5e1!3m2!1ses-419!2sar!4v1629329836705!5m2!1ses-419!2sar" width="1200" height="900" style="border:0;" allowfullscreen="" loading="lazy" class="mapa"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.8757136606105!2d-58.528622284896606!3d-34.733527071884744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccf0c06189123%3A0x19374d5bd2050bb!2sIglesia%20Bautista%20Independiente%20Misionera!5e0!3m2!1ses-419!2sar!4v1603050715061!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapa"></iframe>
 			</div>			
 		</article>
 	</body>
