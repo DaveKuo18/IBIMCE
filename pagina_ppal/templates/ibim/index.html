@@ -93,19 +93,19 @@
 
 			<div>
 				<h2 class="titulo"> Nuestras Reuniones </h2>
-				<h3> Reuniones cotidianas </h3>
+				<h3 class="h3-reuniones"> Reuniones cotidianas </h3>
 					<ul class="p">
 						{% for reunion in comunes %}
-							<li>{{ reunion.descripcion }}: {{ reunion.dia }}, {{ reunion.horario }} - {{ reunion.lugar }}</li>
+							<li>{{ reunion.descripcion }}: {{ reunion.dia }}, {{ reunion.horario }} ( {{ reunion.lugar }} )</li>
 						{% endfor %}
 					</ul>
 
 				<div class="separador-up"></div>
 
-				<h3> Reuniones especiales </h3>
+				<h3 class="h3-reuniones"> Reuniones especiales </h3>
 					<ul class="p">
 						{% for reunion in especiales %}
-							<li>{{ reunion.descripcion }}: {{ reunion.dia }}, {{ reunion.horario }} - {{ reunion.lugar }}</li>
+							<li>{{ reunion.descripcion }}: {{ reunion.dia }}, {{ reunion.horario }} ( {{ reunion.lugar }} )</li>
 						{% endfor %}
 					</ul>
 			</div>

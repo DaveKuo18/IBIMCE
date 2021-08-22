@@ -8,7 +8,7 @@ class reuniones_comunes(models.Model):
     lugar = models.CharField(max_length=64)
 
     def __str__(self):
-        return f"{self.descripcion}: {self.dia} {self.horario} en {self.lugar}"
+        return f"{self.descripcion}: {self.dia} {self.horario} ( {self.lugar} )"
 
 class reuniones_especiales(models.Model):
     descripcion = models.CharField(max_length=64)
@@ -17,4 +17,4 @@ class reuniones_especiales(models.Model):
     lugar = models.CharField(max_length=64)
 
     def __str__(self):
-        return f"{self.descripcion}: {self.dia} {self.horario} en {self.lugar}"
+        return f"{self.descripcion}: {self.dia} {self.horario} ( {self.lugar} )"

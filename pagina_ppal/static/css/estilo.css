@@ -404,6 +404,9 @@ h3 {
 	text-shadow: -3px 3px 2px #444;
 	padding-bottom: 9px;
 }
+	.h3-reuniones{
+		width: 90%;
+	}
 
 h4 {
 	color: #7996B6;
