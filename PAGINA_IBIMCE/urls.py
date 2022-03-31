@@ -19,5 +19,5 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ibim/', include("pagina_ppal.urls"))
+    path('', include("pagina_ppal.urls"))
 ]
